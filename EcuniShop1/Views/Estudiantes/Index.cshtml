@@ -1,0 +1,59 @@
+﻿@model IEnumerable<EcuniShop1.Models.Estudiante>
+
+@{
+    ViewData["Title"] = "Estudiantes";
+}
+
+<h1>Estudiantes</h1>
+
+<p>
+    <a asp-action="Create">Registrar nuevo estudiante</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreEstudiante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApellidoEstudiante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Membresia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdUbicacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreEstudiante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoEstudiante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Membresia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdUbicacion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdEstudiante">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdEstudiante">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdEstudiante">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

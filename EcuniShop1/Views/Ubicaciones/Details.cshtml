@@ -1,0 +1,36 @@
+﻿@model EcuniShop1.Models.Ubicacion
+
+@{
+    ViewData["Title"] = "Detalles Ubicacion";
+}
+
+<h1>Detalles de la Ubicacion</h1>
+
+<div>
+    <h4>Aqui se muestran los detalles de la ubicacion:</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Provincia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Provincia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ciudad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DescuentoUbicacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DescuentoUbicacion)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdUbicacion">Editar Elementos</a> |
+    <a asp-action="Index">Regresar</a>
+</div>
