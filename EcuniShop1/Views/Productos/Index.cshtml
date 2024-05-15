@@ -1,14 +1,17 @@
 ﻿@model IEnumerable<EcuniShop1.Models.Producto>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Productos";
 }
 
-<h1>Index</h1>
+<h1>Productos</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">
+        <button type="button" class="btn btn-primary">Ingresar Productos </button>
+    </a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -49,9 +52,9 @@
                 @Html.DisplayFor(modelItem => item.Cantidad)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdProducto">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdProducto">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdProducto">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.IdProducto" class="btn btn-dark">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.IdProducto" class="btn btn-warning">Detalles</a>
+                    <a asp-action="Delete" asp-route-id="@item.IdProducto" class="btn btn-danger">Eliminar</a>
             </td>
         </tr>
 }

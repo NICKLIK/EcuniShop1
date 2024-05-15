@@ -7,7 +7,10 @@
 <h1>Ubicaciones</h1>
 
 <p>
-    <a asp-action="Create">Crear Ubicacion</a>
+    <a asp-action="Create">
+        <button type="button" class="btn btn-primary">Crear Ubicación</button>
+    </a>
+
 </p>
 <table class="table">
     <thead>
@@ -34,12 +37,12 @@
                 @Html.DisplayFor(modelItem => item.Ciudad)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DescuentoUbicacion)
+                @Html.DisplayFor(modelItem => item.DescuentoUbicacion)            
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdUbicacion">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.IdUbicacion">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdUbicacion">Eliminar</a>
+                    <a asp-action="Edit" asp-route-id="@item.IdUbicacion" class="btn btn-dark">Editar</a> 
+                    <a asp-action="Details" asp-route-id="@item.IdUbicacion" class="btn btn-warning">Detalles</a> 
+                    <a asp-action="Delete" asp-route-id="@item.IdUbicacion" class="btn btn-danger">Eliminar</a>
             </td>
         </tr>
 }

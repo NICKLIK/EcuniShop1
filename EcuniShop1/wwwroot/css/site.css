@@ -1,5 +1,6 @@
 html {
     font-size: 14px;
+    font-family: 'Signika Negative', sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -14,11 +15,13 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    font-family: 'Signika Negative', sans-serif;
 }
 
 body {
-    margin-bottom: 60px; 
+    margin-bottom: 60px;
     background-color: #ffac28;
+    font-family: 'Signika Negative', sans-serif;
 }
